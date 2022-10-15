@@ -5,7 +5,8 @@
         "img2": "https://photos.app.goo.gl/SNknX9WGYsBXDiWs7",
         "price":"30€",
         "category":["wood", "drehbank"],
-        "maker":"M"
+        "maker":"M",
+        "description": "Beautifully hand crafted candlestick, with walnut wood."
     },
     {
         "name":"Eifel tower kit",
@@ -13,7 +14,8 @@
         "img2": "https://photos.app.goo.gl/SDTSWAMMPyjFVg2X7",
         "price":"20€",
         "category":["laser_cutter"],
-        "maker":"" 
+        "maker":"",
+        "description":"A self-construct kit cut out on the laser cutter on thin wood." 
     },
     {
         "name":"Macramee plant hanger and pot",
@@ -21,6 +23,7 @@
         "img2": "",
         "price":"17€",
         "category":["textile"],
-        "maker":"Laura Hesse" 
+        "maker":"Laura Hesse" ,
+        "description":"Height: 1m, Pot width: 15cm."
     }
 ]

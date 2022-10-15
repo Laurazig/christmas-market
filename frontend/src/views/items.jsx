@@ -1,16 +1,16 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./items.scss"
-import { MyContext } from "../App";
+//import { MyContext } from "../App";
 
-const ItemsPage = () => {
-    const { items } = useContext(MyContext);
+const ItemsPage = (props) => {
+    //const { items } = useContext(MyContext);
     return (
         <>
             <h1>Leipzig Christmas Market</h1>
             <h2>MakerSpace</h2>
             <h3>Hand-Crafted Christmas Presents</h3>
             <div className="item-container">
-                {items.map((item) => {
+                {props.items.map((item) => {
                     return (
                         <div key={item._id} className="mappedItem">
                             <p>here</p>

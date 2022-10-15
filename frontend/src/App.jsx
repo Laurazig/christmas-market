@@ -12,7 +12,7 @@ function App() {
   //===============================
   useEffect(() => {
     const fetchItemsData = async () => {
-      const response = await fetch(process.env.REACT_APP_SERVER_URL + "/items");
+      const response = await fetch(process.env.REACT_APP_SERVER_URL + "/");
       const result = await response.json();
       try {
         if (response.ok) {
@@ -28,11 +28,11 @@ function App() {
   }, []);
 
   return (
-    <MyContext.Provider value={{ items }}>
+    <MyContext.Provider value={{ items, setItems }}>
       <div className="App">
         <Router>
           <Routes>
-            <Route path="/items" element={<ItemsPage />} />
+            <Route path="/" element={<ItemsPage items={items} />} />
           </Routes>
         </Router>
       </div>

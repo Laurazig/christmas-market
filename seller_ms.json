@@ -1,0 +1,26 @@
+[
+    {
+        "name":"wooden candelstick tall",
+        "img1":"https://photos.app.goo.gl/gqe3pxQmyyKGetnu8",
+        "img2": "https://photos.app.goo.gl/SNknX9WGYsBXDiWs7",
+        "price":"30€",
+        "category":["wood", "drehbank"],
+        "maker":"M"
+    },
+    {
+        "name":"Eifel tower kit",
+        "img1":"https://photos.app.goo.gl/CPkW81GNY2kjpuhh7",
+        "img2": "https://photos.app.goo.gl/SDTSWAMMPyjFVg2X7",
+        "price":"20€",
+        "category":["laser_cutter"],
+        "maker":"" 
+    },
+    {
+        "name":"Macramee plant hanger and pot",
+        "img1":"https://photos.app.goo.gl/ciuJKrGFsUDuFfyp9",
+        "img2": "",
+        "price":"17€",
+        "category":["textile"],
+        "maker":"Laura Hesse" 
+    }
+]

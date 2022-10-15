@@ -1,0 +1,116 @@
+[
+    {
+        "sellerName": "Rosentreter Modedesign",
+        "sellerAddress": {
+            "street": "Karl Heiner Str.",
+            "street no.": "93",
+            "postcode": "04229"
+        },
+        "url": "https://rosentreter-modedesign.de/",
+        "itemsSold":["trousers", "waistcoats"],
+        "itemsForSale": [
+            {
+                "trousers": {
+                    "name": "Peaky's Sunday best",
+                    "SKU": "RMD001MBLACK",
+                    "colour": "black",
+                    "size": "M",
+                    "material": "cotton",
+                    "categories": [
+                        "women"
+                    ],
+                    "description": "European woven material. Design inspired by Peaky Blinders"
+                }
+            },{
+                "waistcoat": {
+                    "name": "Peaky's Sunday best vest",
+                    "SKU": "RMD002LGRAY",
+                    "colour": "gray",
+                    "size": "L",
+                    "material": "cotton",
+                    "categories": [
+                        "men"
+                    ],
+                    "description": "European woven material. Design inspired by Peaky Blinders"
+                }
+            }
+        ],
+        "orders": {}
+    },
+    {
+        "sellerName": "Craft Pigeon",
+        "sellerAddress": {
+            "street": "Jahnallee",
+            "street no.": "61",
+            "postcode": "04177"
+        },
+        "url":"https://www.robynchamberlain.com/handweberei-home",
+        "itemsSold": ["scarves"],
+        "itemsForSale": [
+            {
+                "scarf": {
+                    "name": "woven rainbow",
+                    "SKU": "CP001WR",
+                    "colour": "multi",
+                    "material": "cotton",
+                    "categories": [
+                        "eco"
+                    ],
+                    "description": "Handwoven with recyled denim and organic cotton"
+                }
+            },{
+                "waistcoat": {
+                    "name": "thermal delight",
+                    "SKU": "CP002TD",
+                    "colour": "white",
+                    "material": "wool",
+                    "categories": [
+                        "wool"
+                    ],
+                    "description": "locally sourced wool, spun locally and woven in shop"
+                }
+            }
+        ],
+        "orders": {
+        }
+    },
+    {
+        "sellerName": "IHM Sustainable Fashion",
+        "sellerAddress": {
+            "street": "Gemeindeamtsstraße",
+            "street no.": "1",
+            "postcode": "04177"
+        },
+        "url":"https://www.ihm-fair-fashion.com/",
+        "itemsSold": ["trousers", "jumpers"],
+        "itemsForSale": [
+            {
+                "trousers": {
+                    "name": "upcycled dream ",
+                    "SKU": "IFF_001_M_UD_P",
+                    "colour": "pink",
+                    "size": "M",
+                    "material": "denim",
+                    "categories": [
+                        "upcycled"
+                    ],
+                    "description": "lovingly sewn from other wornout jeans."
+                }
+            },{
+                "waistcoat": {
+                    "name": "thermal hoodie",
+                    "SKU": "IFF_001_S_TH_G",
+                    "colour": "green",
+                    "size": "S",
+                    "material": "jersey cotton",
+                    "categories": [
+                        "hoodie"
+                    ],
+                    "description": "eco material with cretification. Thermal lining."
+                }
+            }
+        ],
+        "orders": {
+        }
+    }
+]

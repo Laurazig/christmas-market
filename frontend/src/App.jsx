@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import './App.scss';
 import ItemsPage from "./views/items"
 
-export const MyContext = React.createContext();
+//export const MyContext = React.createContext();
 
 function App() {
   const [items, setItems] = useState([]);
@@ -17,6 +17,7 @@ function App() {
       try {
         if (response.ok) {
           setItems(result)
+          //console.log({result})
         } else {
           throw new Error(result.message)
         }
@@ -28,7 +29,7 @@ function App() {
   }, []);
 
   return (
-    <MyContext.Provider value={{ items, setItems }}>
+    //<MyContext.Provider value={{ items, setItems }}>
       <div className="App">
         <Router>
           <Routes>
@@ -36,7 +37,7 @@ function App() {
           </Routes>
         </Router>
       </div>
-    </MyContext.Provider>
+    //</MyContext.Provider>
   );
 }
 

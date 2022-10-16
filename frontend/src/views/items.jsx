@@ -24,26 +24,30 @@ const ItemsPage = (props) => {
             <div className="item-container">
                 {seller_ms.map((item) => {
                     return (
-                        <div key={item.name} className="mappedItem">
-                            <img src={item.img1} width="300px" alt="christmas handcrafted items" />
+                        <div key={item._id} className="mappedItem">
+                            {/* <img src={item.img1} width="300px" alt="christmas handcrafted items" /> */}
+                            <p>{item.name}</p>
+                            <strong className="price">price: {item.price} </strong>
+                            <p>Description: {item.description}</p>
+                            <p>Category: {item.category}</p>
+                            <p>Maker: {item.maker} </p>
+                            <p>SKU: {item._id}</p>
+                        </div>
+                    )
+                })}
+            </div>
+            <div className="item-container">
+                {props.items.map((item) => {
+                    return (
+                        <div key={item._id} className="mappedItem">
+                            <p>from DB</p>
+                            {/* <img src={item.img1} width="300px" alt="christmas handcrafted items" /> */}
                             <p>{item.name}</p>
                             <strong className="price">€ {item.price}</strong>
                         </div>
                     )
                 })}
             </div>
-            {/* <div className="item-container">
-                {props.items.map((item) => {
-                    return (
-                        <div key={item._id} className="mappedItem">
-                            <p>from DB</p>
-                            <img src={item.img1} width="300px" alt="christmas handcrafted items" />
-                            <p>{item.name}</p>
-                            <strong className="price">€ {item.price}</strong>
-                        </div>
-                    )
-                })}
-            </div> */}
         </>
     )
 

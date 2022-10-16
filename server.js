@@ -5,6 +5,7 @@ import morgan from "morgan";
 import cors from "cors";
 import itemRouter from "./routes/itemsRoute.js";
 import globalErrorHandler from "./middleware/globalErrorHandler.js";
+import makeritem from "./models/itemMS_model.js"
 
 dotenv.config();
 
@@ -21,6 +22,23 @@ mongoose
     .catch((error) => {
         console.log("an error occurred while connecting ot the db", error);
     });
+    
+// add DB entry
+// const addItemDB = new makeritem({
+//     _id: "634ad3be4809f2c2e225271e",
+//     name: "Tea-light holders", 
+//     img1: "",
+//     img2: "",
+//     price: 15.99,
+//     category: ["candels ", "wood"],
+//     maker: "L", 
+//     description: "handcrafted tea-light holders",
+// })
+// await addItemDB.save()
+
+// find DB entry
+// const firstEntry = await makeritem.findOne({})
+// console.log(firstEntry)
 
 app.use(morgan("tiny"));
 app.use(globalErrorHandler);

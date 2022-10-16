@@ -1,4 +1,4 @@
-import makerspace from "../models/itemMS.js"
+import makeritem from "../models/itemMS_model.js"
 import createError from "http-errors";
 
 //=====================================
@@ -8,7 +8,7 @@ import createError from "http-errors";
 export const itemsGet = async (req, res, next) => {
     let foundItems;
     try {
-      foundItems = await makerspace.find();
+      foundItems = await makeritem.find();
       //console.log(foundItems)
     } catch {
       return next(createError(500, "Database could not get items. Please try again"));

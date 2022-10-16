@@ -21,11 +21,27 @@ const ItemsPage = (props) => {
             <img src={candelStick} alt=""/>
             <img src={candelStick2} alt=""/>
 
+           
             <div className="item-container">
+                {props.items.map((item) => {
+                    return (
+                        <div key={item._id} className="mappedItem">
+        <p>{item.name}</p>
+                            <img src={item.img1} width="300px" alt="christmas handcrafted items" />
+                            <p>Description: {item.description}</p>
+                            <p>Category: {item.category}</p>
+                            <p>Maker: {item.maker} </p>
+                            <p>SKU: {item._id}</p>
+                            <strong className="price">{item.price} €</strong>
+                        </div>
+                    )
+                })}
+            </div>
+            {/* <div className="item-container">
                 {seller_ms.map((item) => {
                     return (
                         <div key={item._id} className="mappedItem">
-                            {/* <img src={item.img1} width="300px" alt="christmas handcrafted items" /> */}
+                            <img src={item.img1} width="300px" alt="christmas handcrafted items" />
                             <p>{item.name}</p>
                             <strong className="price">price: {item.price} </strong>
                             <p>Description: {item.description}</p>
@@ -35,19 +51,7 @@ const ItemsPage = (props) => {
                         </div>
                     )
                 })}
-            </div>
-            <div className="item-container">
-                {props.items.map((item) => {
-                    return (
-                        <div key={item._id} className="mappedItem">
-                            <p>from DB</p>
-                            {/* <img src={item.img1} width="300px" alt="christmas handcrafted items" /> */}
-                            <p>{item.name}</p>
-                            <strong className="price">€ {item.price}</strong>
-                        </div>
-                    )
-                })}
-            </div>
+            </div> */}
         </>
     )
 

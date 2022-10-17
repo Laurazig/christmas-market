@@ -6,7 +6,7 @@ import cors from "cors";
 import itemRouter from "./routes/itemsRoute.js";
 import globalErrorHandler from "./middleware/globalErrorHandler.js";
 
-dotenv.config();
+// dotenv.config();
 
 const app = express();
 app.use(cors({origin:"http://localhost:3000"}));

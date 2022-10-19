@@ -6,7 +6,7 @@ import cors from "cors";
 import itemRouter from "./routes/itemsRoute.js";
 import globalErrorHandler from "./middleware/globalErrorHandler.js";
 
-// dotenv.config();
+dotenv.config();
 
 const app = express();
 app.use(cors({origin:"http://localhost:3000"}));
@@ -25,5 +25,6 @@ mongoose
 app.use(morgan("tiny"));
 app.use(globalErrorHandler);
 app.use("/", itemRouter)
+app.use(express.static("assets"));
 
 app.listen(3001, () => console.log("The server has started on port 3001"));

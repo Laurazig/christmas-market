@@ -1,8 +1,9 @@
-@import "../../scss-styling/styleVariables.scss";
+@import "../../scss/mixins.scss";
+
 
 .boxAlignment{
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     height: 40%;
 }

@@ -1,0 +1,29 @@
+$mainCol: #147508;
+$mainColLighter: #91c88a73;
+$secondaryCol: white;
+$buttonFilledHover: #1e8713;
+
+@mixin buttonStyle {
+    width: clamp(12px, 10vw, 95px);
+    height: 35px;
+    border-radius: 7px;
+    min-width: 100px;
+}
+
+@mixin buttonFilled {
+    @include buttonStyle;
+    background-color: $mainCol;
+    border: none;
+    color: $secondaryCol;
+    cursor: pointer;
+
+    a {
+        color: $secondaryCol;
+        text-decoration: none;
+    }
+
+    &:hover {
+        transform: scale(1.01);
+        background-color: $buttonFilledHover;
+    }
+}

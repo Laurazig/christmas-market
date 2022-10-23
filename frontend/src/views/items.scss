@@ -1,3 +1,5 @@
+@import "../scss/mixins.scss";
+
 h1, 
 h2,
 h3{
@@ -24,4 +26,8 @@ width: 10rem;
     border-radius: 1rem;
     margin: 1rem;
     padding: 1rem;
+}
+
+button{
+    @include buttonFilled;
 }

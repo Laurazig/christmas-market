@@ -10,6 +10,17 @@ import candelStick2 from "../assets/MS_wood_candelstick_2.JPG"
 
 const ItemsPage = (props) => {
     //const { items } = useContext(MyContext);
+
+    // <form onSubmit={submitOrder} className="new-delivery-address-form">
+    //     <h3>New Delivery Address: </h3>
+    //     <div className='new-delivery-address-container'>
+    //         <div className='label-and-input'>
+    //             <div className='label'> <label htmlFor="hn"></label>House Number</div>
+    //             <div> <input type="number" defaultValue={user.info.houseNo} id="hn" name="hn" min={1} /></div>
+    //         </div>
+    //     </div>
+    //     <button className='new-address-btn' disabled={cart.length < 3}> Continue </button>
+    // </form>
     return (
         <>
             <h1>Leipzig Christmas Market</h1>
@@ -33,6 +44,8 @@ const ItemsPage = (props) => {
                             <p>Maker: {item.maker} </p>
                             <p>SKU: {item._id}</p>
                             <strong className="price">{item.price} €</strong>
+                            <br />
+                            <button>buy now </button>
                         </div>
                     )
                 })}

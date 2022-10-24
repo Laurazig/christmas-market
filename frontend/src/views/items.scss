@@ -1,33 +1,51 @@
 @import "../scss/mixins.scss";
 
-h1, 
-h2,
-h3{
-    color:white;
-}
+body {
+    background-color: crimson;
 
-body{
-    background-color:crimson ;
-}
+    h1,
+    h2,
+    h3 {
+        color: white;
+        text-align: center;
+    }
 
-img{
-border-radius: 1rem;
-width: 10rem;
-}
-.item-container{
-    border: 1px solid;
-    border-radius: 1rem;
-    margin: 1rem;
-    padding: 1rem;
+    h1 {
+        font-size: 3rem;
+    }
 
-}
-.mappedItem {
-    border: 1px solid lightgray;
-    border-radius: 1rem;
-    margin: 1rem;
-    padding: 1rem;
-}
+    img {
+        border-radius: 1rem;
+        width: 10rem;
 
-button{
-    @include buttonFilled;
+    }
+
+    .item-container {
+        border: 1px solid;
+        border-radius: 1rem;
+        margin: 1rem;
+        padding: 1rem;
+
+        .mappedItem {
+            border: 1px solid lightgray;
+            border-radius: 1rem;
+            margin: 1rem;
+            padding: 1rem;
+            
+
+            .itemTitle {
+                font-size: 2rem;
+                text-align: center;
+            }
+            div{
+                display: flex;
+                justify-content: center;
+
+            }
+
+            button {
+                @include buttonFilled;
+            }
+        }
+    }
 }

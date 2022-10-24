@@ -37,8 +37,10 @@ const ItemsPage = (props) => {
                 {props.items.map((item) => {
                     return (
                         <div key={item._id} className="mappedItem">
-                            <p>{item.name}</p>
+                            <p className="itemTitle">{item.name}</p>
+                            <div>
                             <img src={item.img1} width="300px" alt="christmas handcrafted items" />
+                            </div>
                             <p>Description: {item.description}</p>
                             <p>Category: {item.category}</p>
                             <p>Maker: {item.maker} </p>

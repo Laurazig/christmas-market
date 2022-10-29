@@ -8,6 +8,8 @@ import StripeCancelPage from "./views/stripe/stripeCancel";
 export const MyContext = React.createContext();
 
 function App() {
+  const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+  const [cart, setCart] = useState(cartItems);
   const [items, setItems] = useState([]);
   const [orders, setOrders] = useState([]);
 
@@ -33,7 +35,7 @@ function App() {
   }, []);
 
   return (
-    <MyContext.Provider value={{ items, setItems, orders, setOrders }}>
+    <MyContext.Provider value={{ cart, items, setItems, orders, setOrders }}>
       <div className="App">
         <Router>
           <Routes>

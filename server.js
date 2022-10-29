@@ -3,7 +3,9 @@ import express from "express";
 import mongoose from "mongoose";
 import morgan from "morgan";
 import cors from "cors";
-import itemRouter from "./routes/itemsRoute.js";
+import itemRouter from "./routes/itemsRouter.js";
+// import orderRouter from "./routes/ordersRouter.js";
+// import paymentRouter from "./routes/paymentRouter.js";
 import globalErrorHandler from "./middleware/globalErrorHandler.js";
 
 dotenv.config();
@@ -24,7 +26,9 @@ mongoose
 
 app.use(morgan("tiny"));
 app.use(globalErrorHandler);
-app.use("/", itemRouter)
+app.use("/", itemRouter);
+//app.use("/orders", orderRouter);
+//app.use("/payment", paymentRouter);
 app.use(express.static("assets"));
 
 app.listen(3001, () => console.log("The server has started on port 3001"));

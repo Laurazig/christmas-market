@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import "./items.scss";
 import { MyContext } from "../App";
 import Eifel from "../assets/MS_eifel.JPG"
@@ -11,14 +11,15 @@ import candelStick2 from "../assets/MS_wood_candelstick_2.JPG"
 const ItemsPage = (props) => {
     const {
         cart,
+        setCart,
         setOrders,
         orders,
+
     } = useContext(MyContext);
 
+    const [total, setTotal] = useState(0);
+
     const addToCart = async (e) => { }
-
-
-
 
     const submitOrder = async (e) => {
         e.preventDefault();
@@ -49,6 +50,34 @@ const ItemsPage = (props) => {
         }
     };
 
+
+    const stripe = async () => {
+
+        const pay = {
+          total: total,
+        };
+    
+        const settings = {
+          method: 'POST',
+          body: JSON.stringify(pay),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        };
+        const response = await fetch(`http://localhost:3001/payment`, settings);
+        const result = await response.json();
+        try {
+          if (response.ok) {
+            //setStripeState(true)
+            setCart([]);
+            window.location.href = result.url;
+          } else {
+            throw new Error(result.message);
+          }
+        } catch (err) {
+          alert(err.message);
+        }
+      };
     return (
         <>
             <h1>Leipzig Christmas Market</h1>
@@ -59,7 +88,7 @@ const ItemsPage = (props) => {
             <img src={macrame} alt="" />
             <img src={candelStick} alt="" />
             <img src={candelStick2} alt="" />
-            <button onClick={submitOrder}>pay</button>
+            <button onClick={stripe}>pay</button>
 
 
             <div className="item-container">

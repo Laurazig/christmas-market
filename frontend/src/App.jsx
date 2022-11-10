@@ -18,6 +18,7 @@ function App() {
   //===============================
   useEffect(() => {
     const fetchItemsData = async () => {
+      console.log(process.env.REACT_APP_SERVER_URL);
       const response = await fetch(process.env.REACT_APP_SERVER_URL + "/");
       const result = await response.json();
       try {

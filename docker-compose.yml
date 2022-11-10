@@ -6,6 +6,12 @@ services:
     build: .
     ports:
       - "8000:3001"
+  frontend:
+    env_file:
+      - frontend/.env.local
+    build: frontend/
+    ports:
+      - "3000:3000"
     
 
   

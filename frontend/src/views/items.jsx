@@ -18,6 +18,8 @@ const ItemsPage = (props) => {
     } = useContext(MyContext);
 
     const [total, setTotal] = useState(0);
+    const envVar= process.env.REACT_APP_SERVER_URL;
+
 
     const addToCart = async (e) => { }
 
@@ -97,7 +99,7 @@ const ItemsPage = (props) => {
                         <div key={item._id} className="mappedItem">
                             <p className="itemTitle">{item.name}</p>
                             <div>
-                                <img src={item.img1} width="300px" alt="christmas handcrafted items" />
+                                <img src={envVar+"/"+item.img1} width="300px" alt="christmas handcrafted items" />
                             </div>
                             <p>Description: {item.description}</p>
                             <p>Category: {item.category}</p>
